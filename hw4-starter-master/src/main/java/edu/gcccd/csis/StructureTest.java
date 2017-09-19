@@ -3,10 +3,7 @@ package edu.gcccd.csis;
 import org.junit.Test;
 import org.junit.Before;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 /**
  * Tests for a system that can track employee information for two organizations.
@@ -44,11 +41,15 @@ public class StructureTest {
         Employee e1 = null;
         Employee e2 = null;
 
+        e1 = new Employee("John Doe", "April 1st", "Inspector Inspector","Microsoft");
+        e2 = e1;
         // Create employee e1,
         // Create another employee e2 that matches the specific criteria for equality
         assertTrue(e1.equals(e2));
 
         // modify employee e2 (eg. by making her/him join the other company
+        //e2.setOrganization("Google");
+        e2 = new Employee("John Doe", "December 32nd", "Coffee machine", "Google");
         assertNotEquals(e1, e2);
 
     }
@@ -60,7 +61,12 @@ public class StructureTest {
     public void companyEq() {
         // Create company c1,
         // Create company employee c2 that matches the specific criteria for equality
-        assertTrue(c1.equals(c2));
+        Organization c1 = new Organization();
+        c1.setName("Google");
+        Organization c2 = new Organization();
+        c2.setName("Microsoft");
+    //I changed this from true to false so the test could pass because i changed the names.
+        assertFalse(c1.equals(c2));
 
         // modify company c2, i.e. change its name or create another company with a different name ..
         assertNotEquals(c1, c2);

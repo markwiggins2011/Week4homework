@@ -31,4 +31,10 @@ public Employee[]listOfEmployee;
     public void setNumberOfEmployee(int numberOfEmployee) {
         this.numberOfEmployee = numberOfEmployee;
     }
+    boolean equals(Organization e2) {
+        if (name == e2.name) {
+            return true;
+        }
+        return false;
+    }
 }
