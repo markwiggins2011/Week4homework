@@ -11,17 +11,17 @@ import static org.junit.Assert.assertNull;
 /**
  * Tests for a system that can track employee information for two organizations.
  * The Employee information you must (at least) track, is as follows:
- * Name, Job Title, Organization they work for, Birthday
+ * Name, Job Title, edu.gcccd.csis.Organization they work for, Birthday
  *
- * As for the Organization that the Employee works for, you must also (at the very least) track this information:
- * Organization Name, Number of Employees
+ * As for the edu.gcccd.csis.Organization that the Employee works for, you must also (at the very least) track this information:
+ * edu.gcccd.csis.Organization Name, Number of Employees
  *
  * The system must be able to properly compare any two employees against each other to determine,
  * if they are the same Person. This means that if you compared two People,
- * with the same Name, Birthday, and Organization, the system should think that they are equal to one another.
+ * with the same Name, Birthday, and edu.gcccd.csis.Organization, the system should think that they are equal to one another.
  * If any of these properties are different, then the two People are not the same Person.
  * The same rules apply to comparing Organizations to one another.
- * Organizations with the same Organization name are to be thought of as equal,
+ * Organizations with the same edu.gcccd.csis.Organization name are to be thought of as equal,
  * different names means different organizations.
  */
 public class StructureTest {
