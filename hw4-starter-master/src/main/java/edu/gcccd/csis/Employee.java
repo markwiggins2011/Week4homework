@@ -17,9 +17,7 @@ public class Employee {
         return name;
     }
 
-    public String getBirthday() {
-        return birthday;
-    }
+    public String getBirthday() {return birthday;}
 
     public String getJobTitle() {
         return jobTitle;

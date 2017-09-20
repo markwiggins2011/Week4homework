@@ -70,6 +70,7 @@ public class StructureTest {
 
         // modify company c2, i.e. change its name or create another company with a different name ..
         assertNotEquals(c1, c2);
+        c2.setName("Apple");
 
     }
 
